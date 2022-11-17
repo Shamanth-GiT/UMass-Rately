@@ -1,6 +1,5 @@
-/* Import font */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
-/* Custom properties */
+
 :root{
     --light-color: #fff;
     --light-color-alt: #afb6cd;
@@ -24,38 +23,135 @@
     --item-min-height-sm: 20rem;
     --item-min-height-md: 30rem;
 }
-/* Base styles */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 68.5%;
+}
+
+body{
+    font-family: var(--font-family);
+    font-size: var(--font-size-sm);
+    color: var(--light-color-alt);
+    background-color: var(--primary-background-color);
+    letter-spacing: 1px;
+    transition: background-color .25s,color .25s;
+}
+
+a{
+    color: inherit;
+    text-decoration: none;
+}
+
+.logo{
+    color: rgb(255, 252, 252);
+}
+
+.form-control{
+    border-radius: 0;
+    border-color: rgb(0, 0, 0);
+    border-style: solid;
+    padding: 0.7rem 0;
+    width: 50rem;
+}
+
+.form-control::placeholder{
+    color: rgb(0, 0, 0);
+    opacity: 0.9;
+    font-size: small;
+    text-align: center;
+}
+
+button {
+  margin: 20px;
+  outline: none;
+  width: 130px;
+  height: 40px;
+  padding: 10px 25px;
+  border: 2px solid rgb(163, 145, 145);
+  font-weight: 800;
+  font-size: 1.2rem;
+  color:rgb(255, 252, 252);
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+}
+
+.btn-search {
+    position: relative;
+    color: rgb(255, 252, 252);
+    z-index: 2;
+    line-height: 40px;
+    padding: 0;
+  }
+  .btn-search:hover{
+    border: none;
+  }
+  .btn-search:before,
+  .btn-search:after {
+    position: absolute;
+    content: "";
+    width: 0%;
+    height: 0%;
+    border: 2px solid;
+    z-index: -1;
+    transition: all 0.3s ease;
+  }
+  .btn-search:before {
+    top: 0;
+     left: 0;
+     border-bottom-color: transparent;
+     border-right-color: transparent;
+     border-top-color: rgb(255, 252, 252);
+     border-left-color: rgb(255, 254, 254);
+  }
+  .btn-search:after{
+     bottom: 0;
+     right: 0;
+     border-top-color: transparent;
+     border-left-color: transparent;
+     border-bottom-color: rgb(255, 255, 255);
+     border-right-color: rgb(255, 255, 255);
+  }
+  .btn-search:hover:before,
+  .btn-search:hover:after {
+    border-color: rgb(255, 255, 255);
+    height: 100%;
+    width: 100%;
+  }
 
 /* Theme color change */
-
-/* Reusable classes */
+body.light-theme{
+    --light-color: #3d3d3d;
+    --light-color-alt: rgba(0,0,0,.6);
+    --primary-background-color: #fff;
+    --secondary-background-color: #f1f1f1;
+    --hover-light-color: #fff;
+    --transparent-dark-color: var(--secondary-background-color);
+    --transparent-light-color: rgba(0,0,0,.1);
+}
 
 /* Header */
+.header{
+    background-color: var(--secondary-background-color);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+}
 
-/* Header JavaScript Styles */
-
-/* Search */
-
-/* Form JavaScript styles */
-
-/* Featured articles */
-
-/* Featured articles - Sidebar */
-
-/* Quick read */
-
-/* Quick read - Swiper */
-
-/* Older posts */
-
-/* Popular tags */
-
-/* Newsletter */
-
-/* Footer */
-
-/* Scrollbar styles */
-
-/* Blog post */
-
-/* Media queries */
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-block: 0rem;
+    margin-left: 1rem;
+}
