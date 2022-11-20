@@ -52,12 +52,16 @@ a{
     color: rgb(255, 252, 252);
 }
 
+.logo:hover{
+    color: rgba(231, 152, 152, 0.973);
+}
+
 .form-control{
-    border-radius: 0;
+    border-radius: 18px;
     border-color: rgb(0, 0, 0);
     border-style: solid;
     padding: 0.7rem 0;
-    width: 50rem;
+    width: 40rem;
 }
 
 .form-control::placeholder{
@@ -70,10 +74,11 @@ a{
 button {
   margin: 20px;
   outline: none;
-  width: 130px;
-  height: 40px;
+  width: 8rem;
+  height: 4rem;
   padding: 10px 25px;
   border: 2px solid rgb(163, 145, 145);
+  border-radius: 8px;
   font-weight: 800;
   font-size: 1.2rem;
   color:rgb(255, 252, 252);
@@ -82,6 +87,16 @@ button {
   transition: all 0.3s ease;
   position: relative;
   display: inline-block;
+}
+
+.btn-forum{
+  border: none;
+  font-size: large;
+  text-decoration: underline;
+}
+
+.btn-forum:hover{
+  color: rgba(231, 152, 152, 0.973);
 }
 
 .btn-search {
@@ -144,7 +159,7 @@ body.light-theme{
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 200%;
     z-index: 999;
 }
 
@@ -155,3 +170,69 @@ body.light-theme{
     padding-block: 0rem;
     margin-left: 1rem;
 }
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 80vh;
+    padding: 0 4px;
+    margin-top: 10rem;
+  }
+  
+  /* Create four equal columns that sits next to each other */
+  .column{
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 4px;
+  }
+
+  .text-overlay{
+    opacity: 0;
+    width: 130%;
+  }
+  
+  .column img {
+    margin-top: 10px;
+    vertical-align: middle;
+    width: 100%;
+    border-color: #f1f1f1;
+    border-style: solid;
+    border-width: 2px;
+  }
+
+  .column img:hover{
+    opacity: 0.4;
+    border-color:brown;
+  }
+  
+  .img:hover .text-overlay{
+    opacity: 1;
+    width: 100%;
+    font-family: 'Allerta Stencil';
+    font-size: 22px;
+    color: white;
+  }
+  /* Responsive layout - makes a two column-layout instead of four columns */
+  @media screen and (max-width: 800px) {
+    .column {
+      flex: 50%;
+      max-width: 50%;
+    }
+  }
+  
+  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .column {
+      flex: 100%;
+      max-width: 100%;
+    }
+  }
+
+  .container {
+    position: relative;
+    width: 50%;
+  }
+
